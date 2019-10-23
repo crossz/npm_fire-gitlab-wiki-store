@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RatifyModule } from 'ratify';
+import { AngularFireModule } from 'fire-gitlab-wiki-store'
+import { AngularFirestore } from 'fire-gitlab-wiki-store';
 
 @NgModule({
   declarations: [
@@ -10,9 +11,9 @@ import { RatifyModule } from 'ratify';
   ],
   imports: [
     BrowserModule,
-    RatifyModule
+    AngularFireModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
